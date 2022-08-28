@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form validation: Task 2</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .container {
+      max-width: 600px
+    }
+
+    .value-container {
+      grid-template-columns: 1.8fr 3fr 1fr
+    }
+  </style>
+</head>
+
+<body>
+  <section class="container">
+
+    <form autocomplete="off">
+      <h3>Enter your support query</h3>
+      <div class="value-container">
+        <label for="uname">User name:</label>
+        <input type="text" name="uname" id="uname" class="value" minlength=5
+          maxlength="20" pattern="[a-z]\.[a-z0-9]{3,}" required>
+        <span></span><span></span>
+        <span class="hint" aria-live="polite">Format: l.[ld]{3,18} with
+          l=lowercase, d=digit</span>
+      </div>
+      <div class="value-container">
+        <label for="email">Email address:</label>
+        <input type="email" name="email" id="email" class="value"
+          pattern="[a-zA-Z0-9]+@bigcorp.eu" required>
+        <span></span><span></span>
+        <span class="hint" aria-live="polite">Format: [Ld]+@bigcorp.eu with
+          L=any letter, d=digit</span>
+      </div>
+      <div class="value-container">
+        <label for="phone">Phone number:</label>
+        <input type="tel" name="phone" id="phone" minlength=3 maxlength=25
+          pattern="\d{10}|(\d{3} ){2}\d{4}|(\d{3}\.){2}\d{4}|(\d{3}-){2}\d{4}"
+          class="value" required>
+        <span></span><span></span>
+        <span class="hint" aria-live="polite">Format: d{10} or d{3}sd{3}sd{4}
+          with d=digit, s in [- .]</span>
+      </div>
+      <div class="value-container">
+        <label for="comment">Comment:</label>
+        <textarea name="comment" id="comment" rows="4" class="value"
+          maxlength=200 required></textarea>
+        <span></span><span></span>
+        <span class="hint" aria-live="polite">Format: max 200 chars, not
+          empty</span>
+      </div>
+      <button class="btn">submit comment</button>
+    </form>
+
+  </section>
+</body>
+
+</html>
