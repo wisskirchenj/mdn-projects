@@ -41,10 +41,9 @@
       <div class="value-container">
         <label for="phone">Phone number:</label>
         <input type="tel" name="phone" id="phone" minlength=3 maxlength=25
-          pattern="\d{10}|(\d{3} ){2}\d{4}|(\d{3}\.){2}\d{4}|(\d{3}-){2}\d{4}"
-          class="value" required>
+          pattern="\d{3}([-. ]?)\d{3}\1\d{4}" class="value" required>
         <span></span><span></span>
-        <span class="hint" aria-live="polite">Format: d{10} or d{3}sd{3}sd{4}
+        <span class="hint" aria-live="polite">Format: d{3}s?d{3}s?d{4}
           with d=digit, s in [- .]</span>
       </div>
       <div class="value-container">
