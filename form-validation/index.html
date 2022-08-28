@@ -10,26 +10,30 @@
 
 <body>
   <section class="container">
-    <form>
+    <form autocomplete="off">
       <div class="value-container">
         <label for="mail">I would like you to provide me with an e-mail address:</label>
-        <input type="email" id="mail" name="mail" class="value"><br>
+        <input type="email" id="mail" name="mail" class="value">
       </div>
       <button class="btn">Submit</button>
     </form>
+    <footer>Standard-HTML validation with custom error message. Standard E-mail input field, non-required.</footer>
   </section>
+
   <section class="container">
-    <form novalidate>
+    <form novalidate autocomplete="off">
       <div class="value-container">
         <label for="anothermail">
           <span>Please enter an email address:</span>
-          <input type="email" id="anothermail" name="mail"  class="value" required minlength="8">
-          <br>
-          <span class="error" aria-live="polite"></span>
         </label>
+        <input type="email" id="anothermail" name="mail" class="value" required minlength="8">
+        <span> </span>
+        <span class="error" aria-live="polite"></span>
       </div>
       <button class="btn">Submit</button>
     </form>
+    <footer>Custom JavaScript validation with form and field listeners (onBlur, onFocus). Constraint Validation API used.<br>
+    E-mail input field with 'required' attribute and 'minlength' = 8.</footer>
   </section>
   <script src="app.js"></script>
 </body>
