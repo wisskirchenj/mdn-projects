@@ -43,6 +43,7 @@ function showError() {
   } else if (otherEmail.validity.typeMismatch) {
     emailError.textContent = 'Invalid e-mail format.';
   } else if (otherEmail.validity.tooShort) {
-    emailError.textContent = `E-mail needs at least ${otherEmail.minLength} characters; you entered ${otherEmail.value.length}.`;
+    emailError.textContent = `E-mail needs at least ${otherEmail.minLength} characters;
+     you entered ${otherEmail.value.length}.`;
   }
 }

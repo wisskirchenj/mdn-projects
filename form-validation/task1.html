@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form validation: Task 1</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .container {
+      max-width: 600px
+    }
+
+    .value-container {
+      grid-template-columns: 1.8fr 3fr 1fr
+    }
+  </style>
+</head>
+
+<body>
+  <section class="container">
+
+    <form autocomplete="off">
+      <h3>Enter your support query</h3>
+      <div class="value-container">
+        <label for="uname">User name:</label>
+        <input type="text" name="uname" id="uname" class="value" minlength=5
+          maxlength="20" required>
+      </div>
+      <div class="value-container">
+        <label for="email">Email address:</label>
+        <input type="email" name="email" id="email" class="value" required>
+      </div>
+      <div class="value-container">
+        <label for="phone">Phone number:</label>
+        <input type="tel" name="phone" id="phone" minlength=3 maxlength=25
+          pattern="(0\d{2,6}\s*/)?\s*[1-9](\d{2,4}\s*)+" class="value" required>
+      </div>
+      <div class="value-container">
+        <label for="comment">Comment:</label>
+        <textarea name="comment" id="comment" rows="4" class="value"
+          maxlength=200 required></textarea>
+      </div>
+      <button class="btn">submit comment</button>
+    </form>
+
+  </section>
+</body>
+
+</html>
